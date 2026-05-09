@@ -12,7 +12,7 @@ spec:
     matchLabels:
       project: amazon-clone
       app: nginx
-  templates:
+  template:
     metadata:
       labels:
         project: amazon-clone
