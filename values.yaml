@@ -2,4 +2,4 @@ deployment:
   replicas: 4
   imageVersion: latest
 service:
-  targetPort: 8080
+  targetPort: 80
