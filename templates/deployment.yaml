@@ -8,7 +8,7 @@ metadata:
     app: nginx
 spec:
   replicas: {{.Values.deployment.replicas}}
-  selectors:
+  selector:
     matchLabels:
       project: amazon-clone
       app: nginx
