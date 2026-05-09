@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    project: amazon-clone
+    app: nginx
+spec:
+  replicas: {{.Values.deployment.replicas}}
+  selectors:
+    matchLabels:
+      project: amazon-clone
+      app: nginx
+  templates:
+    metadata:
+      labels:
+        project: amazon-clone
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:{{ .Values.deployment.imageVersion }}
